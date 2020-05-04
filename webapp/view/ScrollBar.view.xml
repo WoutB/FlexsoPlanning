@@ -1,0 +1,65 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" controllerName="com.sap.build.standard.untitledPrototype.controller.ScrollBar">
+    <Page title="" showHeader="true" showFooter="true" showNavButton="false">
+        <content>
+            <IconTabBar select="onSelectChanged" expandable="true" expanded="true" applyContentPadding="true" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok" class="sapUiNoContentPadding">
+                <items>
+                    <IconTabFilter icon="sap-icon://group-2" iconColor="Default" text="Project" count="" design="Vertical" showAll="false" textDirection="LTR" enabled="true" visible="true" tooltip="" iconDensityAware="false">
+                        <content>
+                            <List mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" itemPress="_onObjectListItemPress" items="{/ProjectSet}">
+                                <infoToolbar/>
+                                <headerToolbar>
+                                    <Toolbar enabled="true" visible="true" width="" design="Solid">
+                                        <content>
+                                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%"/>
+                                        </content>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <items>
+                                    <ObjectListItem intro="" title="{Name}" numberUnit="" numberState="None" type="Navigation" selected="false" showMarkers="false" number="{ProjectId}" press="_onObjectListItemPress">
+                                        <attributes/>
+                                        <firstStatus/>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                </items>
+                            </List>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter icon="sap-icon://group" iconColor="Default" text="Users" count="" design="Vertical" showAll="false" textDirection="RTL" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <List mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" itemPress="_onObjectListItemPress1" items="{/UserSet}">
+                                <infoToolbar/>
+                                <headerToolbar>
+                                    <Toolbar enabled="true" visible="true" width="" design="Solid">
+                                        <content>
+                                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%"/>
+                                        </content>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <items>
+                                    <ObjectListItem intro="" title="{Name}" number="{UserId}" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes/>
+                                        <firstStatus/>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                </items>
+                            </List>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter key="3" icon="sap-icon://bar-chart" iconColor="Default" text="Stats" count="" design="Vertical" showAll="false" textDirection="RTL" enabled="true" visible="true" iconDensityAware="false" >
+                        
+                    </IconTabFilter>
+                </items>
+                <content/>
+            </IconTabBar>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <Button text="+PROJECT" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                    <Button text="+USER" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress2"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+    </Page>
+</mvc:View>
